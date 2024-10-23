@@ -1,92 +1,18 @@
-body {
-  font-family: "Arial, sans-serif";
-  background-color: #f8f9fa;
-}
+/* Error: Undefined variable.
+ *   ,
+ * 3 |     font-family: $font-family;
+ *   |                  ^^^^^^^^^^^^
+ *   '
+ *   scss\base\_reset.scss 3:18  @import
+ *   scss\style.scss 1:9         root stylesheet */
 
-header {
-  background-color: #343a40;
-  color: white;
-  padding: 20px;
-  text-align: center;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 3 \2502      font-family: $font-family;\d\a   \2502                   ^^^^^^^^^^^^\a   \2575 \a   scss\\base\\_reset.scss 3:18  @import\a   scss\\style.scss 1:9         root stylesheet";
 }
-header h1 {
-  color: white;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-header p {
-  font-size: 1.2rem;
-}
-
-nav {
-  background-color: #f8f9fa;
-}
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #343a40;
-}
-nav ul li a:hover {
-  color: #007bff;
-}
-
-main section {
-  margin-bottom: 50px;
-}
-main section h2 {
-  color: #343a40;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-main section p {
-  font-size: 1rem;
-  color: #343a40;
-}
-main .card {
-  border: 1px solid #ddd;
-  transition: transform 0.3s ease;
-}
-main .card:hover {
-  transform: translateY(-10px);
-}
-main .card img {
-  border-bottom: 1px solid #ddd;
-}
-main .card .card-title {
-  font-size: 1.5rem;
-}
-main .card .card-text {
-  font-size: 1rem;
-}
-
-footer {
-  background-color: #343a40;
-  color: white;
-  padding: 20px;
-}
-footer p {
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-  main section h2 {
-    font-size: 1.5rem;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
