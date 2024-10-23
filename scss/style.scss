@@ -1,0 +1,129 @@
+// Variables
+$primary-color: #007bff;
+$dark-color: #343a40;
+$light-color: #f8f9fa;
+$font-family: 'Arial, sans-serif';
+
+// Estilos globales
+body {
+  font-family: $font-family;
+  background-color: $light-color;
+}
+
+// Mixin para el estilo de los títulos
+@mixin title-style($color, $size) {
+  color: $color;
+  font-size: $size;
+  margin-bottom: 20px;
+}
+
+// Estilos del header
+header {
+  background-color: $dark-color;
+  color: white;
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    @include title-style(white, 2.5rem);
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+// Estilos de la navegación
+nav {
+  background-color: $light-color;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline;
+      margin: 0 10px;
+
+      a {
+        text-decoration: none;
+        color: $dark-color;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+// Estilos del main y las secciones
+main {
+  section {
+    margin-bottom: 50px;
+
+    h2 {
+      @include title-style($dark-color, 2rem);
+    }
+
+    p {
+      font-size: 1rem;
+      color: $dark-color;
+    }
+  }
+
+  // Tarjetas de servicios
+  .card {
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    img {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+    }
+
+    .card-text {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Estilos del footer
+footer {
+  background-color: $dark-color;
+  color: white;
+  padding: 20px;
+
+  p {
+    margin: 0;
+  }
+}
+
+// Media queries para el diseño responsivo
+@media (max-width: 768px) {
+  header {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  main {
+    section {
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
